@@ -156,6 +156,35 @@ a:hover{
     padding-bottom: 20px;
 }
 
+#social{
+    margin-bottom: 20px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.fa{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover{
+    opacity: 0.7;
+}
+
+.fa-facebook{
+    background: #3b5998;
+    color: white;
+}
+
+.fa-twitter{
+    background: #55acee;
+    color: white;
+}
+
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     h1{
@@ -209,6 +238,11 @@ a:hover{
         box-sizing: border-box;
         position: center;
     }
+
+    #social{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 /*Desktop*/
@@ -253,8 +287,9 @@ a:hover{
         flex-direction: row;
     }
 
-    ul.social_list{
-        display: none;
+    #social{
+        display: flex;
+        flex-direction: row;
     }
 
 

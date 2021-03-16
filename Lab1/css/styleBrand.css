@@ -11,14 +11,14 @@ body{
     background-size: 120%;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    margin: 20px;
+    margin: 0;
     width: 100%;
-    padding: 0;
+    padding: 2px;
 }
 
 .logo{
     min-width: 15%;
-    max-width: 40%;
+    max-width: 20%;
     height: auto;
 }
 
@@ -43,4 +43,136 @@ p {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.thumbnails{
+    max-width: 50%;
+}
+
+.guitarTitle{
+    font-size: 23px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 130%;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.Guitar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.purchase{
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.description{
+    font-size: 15px;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1{
+        font-size: 60px;
+    }
+
+    p{
+        font-size: 28px;
+    }
+
+    a{
+        font-size: 32px;
+    }
+
+    section.grid-container{
+        width: 650px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: left;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+        word-break-inside: 1;
+    }
+
+    #mainText{
+        word-break: normal;
+    }
+
+    .Guitar{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1025px) {
+    html{
+        width: 100%;
+    }
+
+    body{
+        height: 500px;
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 70px;
+    }
+
+    p{
+        font-size: 35px;
+    }
+
+    a{
+        font-size: 40px;
+    }
+
+    /*centre grid container and decide 1000px width*/
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: left;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+
+    .Guitar{
+        display: grid;
+        grid-template-columns: 45% 1fr 1fr;
+        grid-gap: 10px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .description{
+        font-size: 20px;
+    }
 }
