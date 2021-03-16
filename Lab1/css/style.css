@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Comfortaa:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+/*Mobile First*/
+body{
+    background-image: url("../img/LPbw.jpg");
+    background-repeat: no-repeat;
+    background-color: #bebebe;
+    background-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+#Headstock{
+    font-family: 'Comfortaa', cursive;
+    font-max-size: 50px;
+    font-min-size: 20px;
+    color: white;
+}
+
+h2{
+    font-size: 25px;
+}
+
+nav{
+    grid-area: navigation;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav a{
+    flex: 1;
+    padding: 2px;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar{
+    width: 5px;
+    height: auto;
+}
+
+nav a:hover{
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: #eba800;
+}
+
+nav a:active{
+    background-color: black;
+    color: white;
+}
+
+.logo{
+    min-width: 15%;
+    max-width: 40%;
+    height: auto;
+}
+
+.guitar-image{
+    max-width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+p {
+    font-size: 23px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 130%;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main p{
+    font-size: 18px;
+    margin: 25px;
+    text-wrap: normal;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "main-content"
+    "footer";
+    grid-gap: 20px;
+    margin: 0;
+}
+
+header{
+    grid-template-columns: 1fr 1fr;
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.youtube_responsive{
+    width: 100px;
+    height: 350px;
+}
+
+#register{
+    color: white;
+}
+
+
+
+#newsletter{
+    border: 2px solid #eba800;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: fill;
+    width: fit-content;
+    color: white;
+}
+
+#signUp{
+    margin-bottom: 20px;
+
+}
+
+a:hover{
+    text-decoration: underline;
+    background-color: #eba800;
+    color: white;
+}
+
+#logIn{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1{
+        font-size: 60px;
+    }
+
+    p{
+        font-size: 23px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    a{
+        font-size: 28px;
+    }
+
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: left;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+        word-break-inside: 1;
+    }
+
+    #mainText{
+        word-break: break-word;
+    }
+
+    nav{
+        flex-direction: row;
+    }
+
+    .guitar-grid{
+        grid-area: main-content;
+        display: grid;
+        align-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .video-grid{
+        grid-area: main-content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: center;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1025px) {
+    html{
+        width: 100%;
+    }
+
+    body{
+        height: 500px;
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 70px;
+    }
+
+    p{
+        font-size: 28px;
+        word-break: break-all;
+    }
+
+    a{
+        font-size: 28px;
+    }
+
+    /*centre grid container and decide 1000px width*/
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: left;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav{
+        flex-direction: row;
+    }
+
+    ul.social_list{
+        display: none;
+    }
+
+
+    .guitar-grid{
+        grid-area: main-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .video-grid{
+        grid-area: main-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
