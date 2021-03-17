@@ -35,17 +35,44 @@ h2{
     height: auto;
 }
 
+
+
 .dynamicLogo{
     min-width: 15%;
     max-width: 20%;
     height: auto;
 }
 
-a:hover{
+.dynamicLogo:hover{
+    background-color: #eba800;
+}
+
+a{
+    flex: 1;
+    padding: 2px;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    height: fit-content;
+}
+
+.textLink:hover {
     text-decoration: underline;
     background-color: #eba800;
     color: white;
 }
+
+#homeLogo:hover{
+    background-color: #eba800;
+}
+
+.thumbnails:hover{
+    background-color: white;
+    background-blend-mode: screen;
+}
+
 
 p {
     font-size: 23px;
@@ -158,6 +185,7 @@ p {
 
     a{
         font-size: 40px;
+        height: auto;
     }
 
     /*centre grid container and decide 1000px width*/
