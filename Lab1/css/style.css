@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Comfortaa:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://kit.fontawesome.com/6d1b8cf4fc.js');
 
 
 /*Mobile First*/
@@ -54,6 +55,14 @@ nav a:hover{
     background-color: #eba800;
 }
 
+.navImg{
+    width: 175px;
+}
+
+.navImg:hover{
+    background-color: #eba800;
+}
+
 nav a:active{
     background-color: black;
     color: white;
@@ -85,7 +94,6 @@ p {
     line-height: 130%;
     padding: 0;
     font-weight: bold;
-    margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -142,9 +150,15 @@ footer{
     color: white;
 }
 
+#signUp:hover{
+    text-decoration: underline;
+    background-color: #eba800;
+    color: white;
+}
+
 #signUp{
-    margin-bottom: 20px;
-    font-size: 25px;
+    text-decoration: underline;
+    color: black;
 }
 
 #logIn{
@@ -181,6 +195,10 @@ footer{
     color: white;
 }
 
+#cartWelcome{
+    float: top;
+}
+
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     h1{
@@ -196,8 +214,8 @@ footer{
     }
 
     section.grid-container{
-        width: 1000px;
-        margin: 20px auto;
+        width: 650px;
+        margin: 5px auto;
     }
 
     header{
@@ -215,6 +233,10 @@ footer{
 
     nav{
         flex-direction: row;
+    }
+
+    .navImg{
+        width: 200px;
     }
 
     .guitar-grid{
@@ -281,6 +303,10 @@ footer{
 
     nav{
         flex-direction: row;
+    }
+
+    .navImg{
+        width: 250px;
     }
 
     #social{
