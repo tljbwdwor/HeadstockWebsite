@@ -1,0 +1,64 @@
+{
+  "guitars": [
+    {
+      "brand": "Charvel",
+      "name": "DK24 HSH",
+      "colour": "Satin Orange Crush",
+      "price": 10599
+    },
+    {
+      "brand": "Charvel",
+      "name": "DK24 HH",
+      "colour": "Matte Blue Frost",
+      "price": 10599
+    },
+    {
+      "brand": "Charvel",
+      "name": "DK24 HSS",
+      "colour": "Shell Pink",
+      "price": 9995
+    },
+    {
+      "brand": "Fender",
+      "colour": "Polar White",
+      "name": "Stratocaster",
+      "price": 7499
+    },
+    {
+      "brand": "Fender",
+      "colour": "Black",
+      "name": "Stratocaster",
+      "price": 14995
+    },
+    {
+      "brand": "Fender",
+      "colour": "Red",
+      "name": "Telecaster",
+      "price": 7900
+    },
+    {
+      "brand": "Fender",
+      "name": "Telecaster",
+      "colour": "Yellow",
+      "price": 5500
+    },
+    {
+      "brand": "Ibanez",
+      "name": "RGA",
+      "colour": "Sea Foam Green",
+      "price": 8499
+    },
+    {
+      "brand": "Ibanez",
+      "name": "RGP",
+      "colour": "Transparent Blue",
+      "price": 15995
+    },
+    {
+      "brand": "Ibanez",
+      "colour": "Autumn Leaf Gradation",
+      "name": "RG",
+      "price": 8000
+    }
+  ]
+}

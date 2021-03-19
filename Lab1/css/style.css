@@ -161,6 +161,11 @@ footer{
     color: black;
 }
 
+#backToHome{
+    text-decoration: underline;
+    color: black;
+}
+
 #logIn{
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -197,6 +202,30 @@ footer{
 
 #cartWelcome{
     float: top;
+}
+
+.logOut{
+    float: left;
+    width: fit-content;
+}
+
+#localUser{
+    font-size: 18px;
+}
+
+.cart{
+    font-size: 40px;
+    color: black;
+    float: right;
+    opacity: 50%;
+}
+
+.cart:hover{
+    font-size: 50px;
+    color: white;
+    background-color: #eba800;
+    border-radius: 50%;
+    opacity: 75%;
 }
 
 /*Tablet*/

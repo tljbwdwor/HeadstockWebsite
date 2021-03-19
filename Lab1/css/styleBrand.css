@@ -124,7 +124,20 @@ p {
     font-size: 18px;
 }
 
+.cart{
+    font-size: 40px;
+    color: black;
+    float: right;
+    opacity: 50%;
+}
 
+.cart:hover{
+    font-size: 50px;
+    color: white;
+    background-color: #eba800;
+
+    opacity: 75%;
+}
 
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {

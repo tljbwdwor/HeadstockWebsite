@@ -13,6 +13,9 @@
 <section class="grid-container">
     <header>
         <article>
+            <a  class="cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+        </article>
+        <article>
             <img src="img/logo.png" alt="official Headstock Guitars logo" class="logo">
         </article>
         <h1 id="Headstock">Headstock Guitars</h1>
@@ -67,16 +70,22 @@
     </main>
 
     <footer>
-        <p>Log in below or <a href="register.html" id="signUp">sign up!</a></p>
-        <form>
-            <label for="username">Username:</label><br>
-            <input type="text" required id="username" username="username"><br>
-            <label for="password">Password:</label><br>
-            <input type="password" required id="password" password="password"><br>
-        </form>
-        <form id = "logIn">
-            <input type="submit" value="Log in!" />
-        </form>
+        <div id="loginDiv">
+            <p>Log in below or <a href="register.html" id="signUp">sign up!</a></p>
+            <form id="logIn">
+                <label for="username">Username:</label><br>
+                <input type="text" required id="username" name="username" pattern="[^' ']+" title="username cannot contain spaces"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" required id="password" password="password" pattern=".{5,}" title="password must contain at least 5 characters"><br>
+                <input type="submit" value="Log in!" />
+
+            </form>
+        </div>
+        <div id="logoutDiv">
+                <input class="logOut" type="button" value="Log out" /><br>
+            <p id="localUserNoEmail"></p>
+        </div>
+
         <p>
             Visit us on Facebook or Twitter!
         </p>
@@ -87,6 +96,9 @@
         </ul>
     </footer>
 
+
+<script src="js/Headstock.js"></script>
+<script src="data/users.json"></script>
 </section>
 </body>
 </html>
