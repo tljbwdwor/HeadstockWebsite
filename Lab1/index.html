@@ -12,9 +12,28 @@
 
 <section class="grid-container">
     <header>
-        <article>
-            <a  class="cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-        </article>
+        <table id="basketGreet">
+            <tr>
+                <td>
+                    <div id="cartIcon">
+                        <a  class="cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </td>
+                <td>
+                    <div id="logoutDiv">
+                        <input class="logOut" type="button" value="Log out" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="greeting"></p>
+                </td>
+            </tr>
+        </table>
+
+
+
         <article>
             <img src="img/logo.png" alt="official Headstock Guitars logo" class="logo">
         </article>
@@ -71,7 +90,7 @@
 
     <footer>
         <div id="loginDiv">
-            <p>Log in below or <a href="register.html" id="signUp">sign up!</a></p>
+            <p>To access your shopping cart, log in below or <a href="register.html" id="signUp">sign up!</a></p>
             <form id="logIn">
                 <label for="username">Username:</label><br>
                 <input type="text" required id="username" name="username" pattern="[^' ']+" title="username cannot contain spaces"><br>
@@ -80,10 +99,6 @@
                 <input type="submit" value="Log in!" />
 
             </form>
-        </div>
-        <div id="logoutDiv">
-                <input class="logOut" type="button" value="Log out" /><br>
-            <p id="localUserNoEmail"></p>
         </div>
 
         <p>

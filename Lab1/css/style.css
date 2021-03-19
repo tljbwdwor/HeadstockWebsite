@@ -213,19 +213,32 @@ footer{
     font-size: 18px;
 }
 
-.cart{
+#cartIcon{
     font-size: 40px;
     color: black;
     float: right;
     opacity: 50%;
 }
 
-.cart:hover{
+#cartIcon:hover{
     font-size: 50px;
     color: white;
     background-color: #eba800;
-    border-radius: 50%;
+    border-radius: 50px;
     opacity: 75%;
+}
+
+#logoutDiv{
+    float: right;
+}
+
+#greeting{
+    font-size: 15px;
+    float: right;
+}
+
+#basketGreet{
+    float: right;
 }
 
 /*Tablet*/

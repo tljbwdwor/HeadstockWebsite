@@ -11,9 +11,13 @@
 </head>
 <body>
 <section class="grid-container">
-    <article>
+    <div id="logoutDiv">
+        <input class="logOut" type="button" value="Log out" /><br>
+    </div>
+    <div id="cartIcon">
         <a  class="cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-    </article>
+    </div>
+
     <article>
         <a href="index.html"><img src="img/logo.png" alt="Headstock Guitars logo" class="logo" id="homeLogo"></a>
         <br>
@@ -240,12 +244,20 @@
         <p>
             <a href="index.html" class="textLink">Back to home</a>
         </p>
-        <p>
-            <a href="cart.html" class="textLink">My shopping cart</a>
-        </p>
+        <div id="loginDiv">
+            <p>To access your shopping cart, log in below or <a href="register.html" id="signUp">sign up!</a></p>
+            <form id="logIn">
+                <label for="username">Username:</label><br>
+                <input type="text" required id="username" name="username" pattern="[^' ']+" title="username cannot contain spaces"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" required id="password" password="password" pattern=".{5,}" title="password must contain at least 5 characters"><br>
+                <input type="submit" value="Log in!" />
+
+            </form>
+        </div>
     </footer>
-
+    <br>
+    <script src="js/Headstock.js"></script>
 </section>
-
 </body>
 </html>

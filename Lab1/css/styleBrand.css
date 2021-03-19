@@ -124,6 +124,21 @@ p {
     font-size: 18px;
 }
 
+
+
+#cartIcon{
+    font-size: 40px;
+    color: black;
+    float: right;
+    opacity: 50%;
+}
+#cartIcon:hover{
+    color: white;
+    background-color: #eba800;
+    border-radius: 50%;
+    opacity: 75%;
+}
+
 .cart{
     font-size: 40px;
     color: black;
@@ -131,12 +146,20 @@ p {
     opacity: 50%;
 }
 
-.cart:hover{
-    font-size: 50px;
+.car:hover{
     color: white;
     background-color: #eba800;
-
+    border-radius: 50%;
     opacity: 75%;
+}
+
+#logoutDiv{
+    float-displace: auto;
+    float: right;
+}
+
+#loginDiv{
+    margin-bottom: 30px;
 }
 
 /*Tablet*/

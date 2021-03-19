@@ -14,18 +14,31 @@ if (hourNow > 18) {
 
 
 
+
+
+
 //Upon loading a page, check what's in localStorage and remove either login or logout elements respectively
 window.onload = (event) => {
         showLocalUser();
-
+        console.log('Onload working')
 }
 console.log('page is fully loaded');
 let loginDiv = document.getElementById('loginDiv');
 let logoutDiv = document.getElementById('logoutDiv');
+const cartDiv = document.getElementById('cartIcon');
+const cartDivC = document.getElementById('cartIconC');
+const cartDivF = document.getElementById('cartIconF');
+const cartDivI = document.getElementById('cartIconI');
 if((localStorage.getItem('localUserName') !== null) && (localStorage.getItem('localUserName') !== 'null')){
     loginDiv && loginDiv.remove();
 } else {
     logoutDiv && logoutDiv.remove();
+}
+if((localStorage.getItem('localUserName') === null) || (localStorage.getItem('localUserName') === 'null')){
+    cartDiv && cartDiv.remove();
+    cartDivC && cartDivC.remove();
+    cartDivF && cartDivF.remove();
+    cartDivI && cartDivI.remove();
 }
 
 
@@ -209,8 +222,16 @@ console.log("localstorage email: " + (localStorage.getItem('localUserEmail')));
 console.log("localstorage password: " + (localStorage.getItem('localUserPassword')));
 console.log("localstorage newsletter: " + (localStorage.getItem('localUserNews')));
 
+let elSayhi = document.querySelector('#greeting');
+if((localStorage.getItem('localUserName') !== null) && (localStorage.getItem('localUserName') !== 'null')){
+    elSayhi.textContent = (greeting + ', ' + localStorage.getItem('localUserName') + '!');
+}else{
+    elSayhi.textContent = 'Welcome!';
+}
 
-
-
+//ADDING ITEMS TO CART
+//Need to have eventListener on input for different products
+//Save input to cart page
+//display items in cart can calculated price
 
 
