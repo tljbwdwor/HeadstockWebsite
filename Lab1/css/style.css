@@ -303,6 +303,10 @@ footer{
         display: flex;
         flex-direction: row;
     }
+
+    #greeting{
+        font-size: 20px;
+    }
 }
 
 /*Desktop*/
@@ -369,5 +373,9 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
+    }
+
+    #greeting{
+        font-size: 25px;
     }
 }
