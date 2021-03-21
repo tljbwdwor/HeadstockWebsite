@@ -70,17 +70,12 @@
                 </p>
             </article>
             <p>SEK 7,499</p>
-            <fieldset class="purchase">
-                <label>Purchase</label>
-                <select id = "numberSW">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="submit">Add to shopping cart</button>
-            </fieldset>
+            <form id="formPurchaseSW">
+                <label for="numberSW">Number to add:</label><br>
+                <input type="number" id="numberSW"><br>
+                <input type="submit" value="Add to cart" />
+                <p class="orderOutputSW"></p>
+            </form>
         </div>
 
         <p class="guitarTitle">Fender Performer Series Stratocaster</p>
@@ -120,17 +115,12 @@
                 </p>
             </article>
             <p>SEK 14,995</p>
-            <fieldset class="purchase">
-                <label>Purchase</label>
-                <select id = "numberSB">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="submit">Add to shopping cart</button>
-            </fieldset>
+            <form id="formPurchaseSB">
+                <label for="numberSB">Number to add:</label><br>
+                <input type="number" id="numberSB"><br>
+                <input type="submit" value="Add to cart" />
+                <p class="orderOutputSB"></p>
+            </form>
         </div>
 
         <p class="guitarTitle">Performer Series Telecaster </p>
@@ -169,17 +159,12 @@
                 </p>
             </article>
             <p>SEK 7,900</p>
-            <fieldset class="purchase">
-                <label>Purchase</label>
-                <select id = "numberTR">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="submit">Add to shopping cart</button>
-            </fieldset>
+            <form id="formPurchaseTR">
+                <label for="numberTR">Number to add:</label><br>
+                <input type="number" id="numberTR"><br>
+                <input type="submit" value="Add to cart" />
+                <p class="orderOutputTR"></p>
+            </form>
         </div>
         <p class="guitarTitle">Fender Player Series Telecaster</p>
         <div class="Guitar">
@@ -218,17 +203,12 @@
                 </p>
             </article>
             <p>SEK 5,500</p>
-            <fieldset class="purchase">
-                <label>Purchase</label>
-                <select id = "numberTY">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="submit">Add to shopping cart</button>
-            </fieldset>
+            <form id="formPurchaseTY">
+                <label for="numberTY">Number to add:</label><br>
+                <input type="number" id="numberTY"><br>
+                <input type="submit" value="Add to cart" />
+                <p class="orderOutputTY"></p>
+            </form>
         </div>
     </main>
 
@@ -256,8 +236,12 @@
             </form>
         </div>
     </footer>
-    <br>
-    <script src="js/Headstock.js"></script>
+
+
 </section>
+<script src="js/full.js"></script>
+<script src="js/headstock.js"></script>
+
 </body>
+
 </html>
