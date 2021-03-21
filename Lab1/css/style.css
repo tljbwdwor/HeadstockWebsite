@@ -251,6 +251,7 @@ footer{
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     color: white;
+    white-space-treatment: pre-line;
 }
 
 #totalCost{

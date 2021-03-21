@@ -415,6 +415,8 @@ if((localStorage.getItem('localUserName') !== null) && (localStorage.getItem('lo
 let elCartList = document.querySelector('#cartList');
 let listContents = '';
 
+
+
 let listNames = ['Charvel Pro Mod DK24 HSH (Orange Satin Crush)',
     'Charvel Pro Mod DK24 HSS (Shell Pink)',
     'Charvel Pro Mod DK24 HH (Matte Blue Frost)',
@@ -437,9 +439,10 @@ let prices = [localStorage.getItem('HSH price'),
     localStorage.getItem('RGP price'),
     localStorage.getItem('RG price')];
 
+
 for (let i = 0; i < 10; i++){
-    if (prices[i] !== '0'){
-        listContents = listContents + listNames[i] + ' ' + prices[i] + '\n';
+    if ((prices[i] !== '0') && ((prices[i]) !== null) && (prices[i]) !== 'null'){
+       listContents = listContents + listNames[i] + ' ' + prices[i] + '\n';
     }
 }
 
