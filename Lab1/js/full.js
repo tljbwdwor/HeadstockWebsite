@@ -51,29 +51,31 @@ const elOrderOutputRG = document.querySelector('#orderOutputRG');
 
 //Set variables to retrieve number ordered and establish price per unit
 //Charvel
-const elNumberHSH = document.querySelector('#numberHSH');
+let elNumberHSH = document.querySelector('#numberHSH');
 const priceHSH = 10599;
-const elNumberHSS = document.querySelector('#numberHSS');
+let elNumberHSS = document.querySelector('#numberHSS');
 const priceHSS = 9555;
-const elNumberHH = document.querySelector('#numberHH');
+let elNumberHH = document.querySelector('#numberHH');
 const priceHH = 10599;
 //Fender
-const elNumberSW = document.querySelector('#numberSW');
+let elNumberSW = document.querySelector('#numberSW');
 const priceSw = 7499;
-const elNumberSB = document.querySelector('#numberSB');
+let elNumberSB = document.querySelector('#numberSB');
 const priceSB = 14995;
-const elNumberTR = document.querySelector('#numberTR');
+let elNumberTR = document.querySelector('#numberTR');
 const priceTR = 7900;
-const elNumberTY = document.querySelector('#numberTY');
+let elNumberTY = document.querySelector('#numberTY');
 const priceTY = 5500;
 
 //Ibanez
-const elNumberRGA = document.querySelector('#numberRGA');
+let elNumberRGA = document.querySelector('#numberRGA');
 const priceRGA = 8499;
-const elNumberRGP = document.querySelector('#numberRGP');
+let elNumberRGP = document.querySelector('#numberRGP');
 const priceRGP = 15995;
-const elNumberRG = document.querySelector('#numberRG');
+let elNumberRG = document.querySelector('#numberRG');
 const priceRG= 8000;
+
+
 
 //Methods to call for eah item when purchase forms are submitted
 //CHARVEL
@@ -82,7 +84,7 @@ function addHSHToCart(event) {
     localStorage.setItem('HSH price', orderHSH.toString());
 
     elOrderOutputHSH.textContent = 'HSH ORDER TOTAL: ' + localStorage.getItem('HSH price');
-    console.log(localStorage.getItem('HSH price'));
+    console.log(localStorage.getItem('HSH price').valueOf());
 
     setTimeout(() => {window.location = 'charvel.html'}, 1000);
     event.preventDefault();
@@ -217,13 +219,13 @@ function append(parent, el) {
     }
 }
 
-const userData = document.querySelector('#users');
-const productData = document.querySelector('#products');
-const urlUser = 'data/users.json';
+const specialData = document.querySelector('#specialProductsList');
+const productData = document.querySelector('#allProductsList');
+const urlSpecialStock = 'data/specialstock.json';
 const urlProduct = 'data/guitars.json';
 
-//USERDATA
-fetch('data/users.json')
+//SPECIALSTOCKDATA
+fetch('data/specialstock.json')
     .then((response) => {
         return response.json();
     })
@@ -232,18 +234,19 @@ fetch('data/users.json')
     });
 
 //Can be printed out
-let users = fetch(urlUser)
+let special = fetch(urlSpecialStock)
     .then((resp) => resp.json())
     .then(function(data) {
-        console.log(data.users);
-        console.log("First user object in Json file: " + data.users[0].name);
-        let users = data.users;
+        console.log(data.specialStock);
+        console.log("First user object in Json file: " + data.specialStock[0].name);
+        let special = data.specialStock;
 
         //return json to create an array with map()
-        return users.map(function(user) {
+        return special.map(function(specialStock) {
             let li = createNode('li');
-            li.innerHTML = user.name + "<br>" + " " + user.email + "<br>" + user.password + "<br>" + user.newsletter;
-            append(userData, li);
+            li.innerHTML = specialStock.brand + "<br>" + specialStock.name + "<br>" + specialStock.colour + "<br>" + specialStock.price
+            + "<br>" + specialStock.numberInStock + " " + "<br>";
+            append(specialData, li);
         })
     })
 
@@ -264,7 +267,7 @@ let products = fetch(urlProduct)
         let products = data.guitars;
         return products.map(function (guitar) {
             let li = createNode('li');
-            li.innerHTML = guitar.brand + "<br>" + guitar.name + "<br>" + guitar.colour + "<br>" + guitar.price;
+            li.innerHTML = "<br>" + guitar.brand + "<br>" + guitar.name + "<br>" + guitar.colour + "<br>" + guitar.price;
             append(productData, li);
         })
     })
@@ -417,6 +420,8 @@ let listContents = '';
 
 
 
+
+
 let listNames = ['Charvel Pro Mod DK24 HSH (Orange Satin Crush)',
     'Charvel Pro Mod DK24 HSS (Shell Pink)',
     'Charvel Pro Mod DK24 HH (Matte Blue Frost)',
@@ -440,22 +445,14 @@ let prices = [localStorage.getItem('HSH price'),
     localStorage.getItem('RG price')];
 
 
+
+
 for (let i = 0; i < 10; i++){
     if ((prices[i] !== '0') && ((prices[i]) !== null) && (prices[i]) !== 'null'){
-       listContents = listContents + listNames[i] + ' ' + prices[i] + '\n';
+       listContents = listContents + listNames[i] + ' ..... ' /*+ listNumbers[i] + ' '*/ + prices[i] + '\n';
     }
 }
-
-/*prices.forEach(function(item,index,array) {
-    if((item !== null && item !== 'null') && (item !== '0'))
-    listContents = listContents + ' ' + item;
-})*/
 elCartList.textContent = listContents;
-
-let totalBill = 0;
-prices.forEach(function(item,index,array){
-    totalBill += parseInt(item);
-})
 
 
 
@@ -527,3 +524,22 @@ let totalCost = (parseInt(localStorage.getItem('HSH price'))
 
 console.log(totalCost);
 elTotalCost.textContent = 'SEK: ' + totalCost.toString();
+
+
+//THIS DOES NOT WORK
+let listNumbers = [parseInt(elNumberHSH.value).toString(),
+    parseInt(elNumberHSS.value).toString(),
+    parseInt(elNumberHH.value).toString(),
+    parseInt(elNumberSW.value).toString(),
+    parseInt(elNumberSB.value).toString(),
+    parseInt(elNumberTR.value).toString(),
+    parseInt(elNumberTY.value).toString(),
+    parseInt(elNumberRGA.value).toString(),
+    parseInt(elNumberRGP.value).toString(),
+    parseInt(elNumberRG.value).toString()];
+listNumbers.forEach(function(item,index,array){
+    if(listNumbers.value == null){
+        listNumbers.value = 0;
+    }
+    console.log('LISTNUMBERS VALUE = ' + listNumbers);
+})

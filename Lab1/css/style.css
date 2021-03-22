@@ -26,6 +26,7 @@ body{
 
 h2{
     font-size: 25px;
+    font-family: 'Raleway', sans-serif;
 }
 
 nav{
@@ -261,47 +262,81 @@ footer{
     color: red;
 }
 
+#allProductsList{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 20px;
+    white-space-treatment: pre-line;
+}
+
+#specialProductsList{
+    font-family: 'Raleway', sans-serif;
+    color: crimson;
+    font-size: 20px;
+}
+
+#warehouse{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+#specialLink{
+    font-family: 'Raleway', sans-serif;
+    color: crimson;
+    text-decoration: underline;
+}
+
+#specialLink:hover{
+    color: white;
+}
+
+#special{
+    margin-bottom: 20px;
+}
+
+
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    h1{
+    h1 {
         font-size: 60px;
     }
 
-    p{
+    p {
         font-size: 28px;
     }
 
-    a{
+    a {
         font-size: 32px;
     }
 
-    section.grid-container{
+    section.grid-container {
         width: 650px;
         margin: 5px auto;
     }
 
-    header{
+    header {
         text-align: left;
     }
 
-    main{
+    main {
         grid-template-columns: 1fr 1fr;
         word-break-inside: 1;
     }
 
-    #mainText{
+    #mainText {
         word-break: normal;
     }
 
-    nav{
+    nav {
         flex-direction: row;
     }
 
-    .navImg{
+    .navImg {
         width: 200px;
     }
 
-    .guitar-grid{
+    .guitar-grid {
         grid-area: main-content;
         display: grid;
         align-content: center;
@@ -309,7 +344,7 @@ footer{
         grid-gap: 5px;
     }
 
-    .video-grid{
+    .video-grid {
         grid-area: main-content;
         display: grid;
         grid-template-columns: 1fr;
@@ -319,22 +354,43 @@ footer{
         position: center;
     }
 
-    #social{
+    #social {
         display: flex;
         flex-direction: row;
     }
 
-    #greeting{
+    #greeting {
         font-size: 20px;
     }
-}
 
-#cartTitle{
-    font-size: 45px;
-}
 
-#totalCost{
-    font-size: 40px;
+    #cartTitle {
+        font-size: 45px;
+    }
+
+    #cartList {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    #totalCost {
+        font-size: 50px;
+    }
+
+    #allProductsList{
+        font-size: 30px;
+    }
+
+    #specialProductsList{
+        font-size: 30px;
+    }
+
+    #warehouse{
+        font-size: 30px;
+    }
 }
 
 /*Desktop*/
@@ -404,6 +460,34 @@ footer{
     }
 
     #greeting{
-        font-size: 25px;
+        font-size: 35px;
+    }
+
+    #cartTitle {
+        font-size: 55px;
+    }
+
+    #cartList {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    #totalCost {
+        font-size: 60px;
+    }
+
+    #allProductsList{
+        font-size: 40px;
+    }
+
+    #specialProductsList{
+        font-size: 40px;
+    }
+
+    #warehouse{
+        font-size: 40px;
     }
 }

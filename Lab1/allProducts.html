@@ -5,19 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My shopping cart</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <title>All Products</title>
 </head>
 <body>
 <section>
     <p id="greeting"></p>
 
-    <H1 id="cartTitle">Your Shopping cart</H1>
+    <article id="warehouse">
+        <div>Below you can see all the products we have in the warehouse.</div><br>
+        <div>We sometimes store items that are not in our regular product range, here is the place to find them!</div>
+        <div>If you're interested in such an item, get in touch to find out more.</div>
+    </article>
 
-    <pre id="cartList"></pre><br>
+    <H2>Our regular line:</H2>
+    <pre id="allProductsList"></pre><br>
 
-    <H2>TOTAL COST:</H2><article id="totalCost"></article><br>
+    <H2>Special items currently in stock:</H2>
+    <pre id="specialProductsList"></pre><br>
 </section>
 
 

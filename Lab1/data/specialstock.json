@@ -1,0 +1,32 @@
+{
+  "specialStock": [
+    {
+      "brand": "Schecter",
+      "name": "Sun Valley Super Shredder",
+      "colour": "Birch Green",
+      "price": 8995,
+      "numberInStock": "2 in stock"
+    },
+    {
+      "brand": "Jackson",
+      "name": "Pro Series Soloist",
+      "colour": "Metallic Red",
+      "price": 9999,
+      "numberInStock": "1 in stock"
+    },
+    {
+      "brand": "Vigier",
+      "name": "Excalibur",
+      "colour": "black",
+      "price": 35000,
+      "numberInStock": "1 in stock"
+    },
+    {
+      "brand": "Gibson",
+      "name": "Les Paul Custom",
+      "colour": "Honey Sunburst",
+      "price": 22000,
+      "numberInStock": "1 in stock"
+    }
+  ]
+}

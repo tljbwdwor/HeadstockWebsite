@@ -56,7 +56,7 @@ function append(parent, el) {
 
 const userData = document.querySelector('#users');
 const productData = document.querySelector('#products');
-const urlUser = 'data/users.json';
+const urlUser = 'data/specialstock.json';
 const urlProduct = 'data/guitars.json';
 
 //USERDATA
