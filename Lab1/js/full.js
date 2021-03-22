@@ -532,6 +532,9 @@ const elCard = document.getElementById("cardNumber");
 const elSecurity = document.getElementById("securityNumber");
 let elConfirmation = document.getElementById("confirm");
 let conf = '';
+let elTotal = document.getElementById("total");
+elTotal.textContent = 'Total cost: ';
+
 elConfirmation.textContent = conf;
 let cardNr = /^([0-9]{16})$/;
 let cardNr2 = /^([0-9\s]{13,19})$/;
@@ -551,6 +554,7 @@ function pay(event) {
         localStorage.setItem('RGA price', '0');
         localStorage.setItem('RGP price', '0');
         localStorage.setItem('RG price', '0');
+        elTotal.textContent = '';
         elTotalCost.textContent = 'Thank you for your purchase!';
         elConfirmation.textContent = 'An email confirmation will be sent shortly.';
         console.log('PURCHASE COMPLETED');
