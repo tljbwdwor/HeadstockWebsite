@@ -526,20 +526,62 @@ console.log(totalCost);
 elTotalCost.textContent = 'SEK: ' + totalCost.toString();
 
 
-//THIS DOES NOT WORK
-let listNumbers = [parseInt(elNumberHSH.value).toString(),
-    parseInt(elNumberHSS.value).toString(),
-    parseInt(elNumberHH.value).toString(),
-    parseInt(elNumberSW.value).toString(),
-    parseInt(elNumberSB.value).toString(),
-    parseInt(elNumberTR.value).toString(),
-    parseInt(elNumberTY.value).toString(),
-    parseInt(elNumberRGA.value).toString(),
-    parseInt(elNumberRGP.value).toString(),
-    parseInt(elNumberRG.value).toString()];
-listNumbers.forEach(function(item,index,array){
-    if(listNumbers.value == null){
-        listNumbers.value = 0;
+//PAYMENT METHOD
+const elPay = document.querySelector('#pay');
+const elCard = document.getElementById("cardNumber");
+const elSecurity = document.getElementById("securityNumber");
+let elConfirmation = document.getElementById("confirm");
+let conf = '';
+elConfirmation.textContent = conf;
+let cardNr = /^([0-9]{16})$/;
+let cardNr2 = /^([0-9\s]{13,19})$/;
+let secureNr = /^([0-9]{3})$/;
+function pay(event) {
+    if (totalCost < 1) {
+        alert("There is nothing in the basket!")
+       } else
+       if ((elCard.value.match(cardNr) || elCard.value.match(cardNr2)) && (elSecurity.value.match(secureNr))) {
+        localStorage.setItem('HSH price', '0');
+        localStorage.setItem('HSS price', '0');
+        localStorage.setItem('HH price', '0');
+        localStorage.setItem('SW price', '0');
+        localStorage.setItem('SB price', '0');
+        localStorage.setItem('TR price', '0');
+        localStorage.setItem('TY price', '0');
+        localStorage.setItem('RGA price', '0');
+        localStorage.setItem('RGP price', '0');
+        localStorage.setItem('RG price', '0');
+        elTotalCost.textContent = 'Thank you for your purchase!';
+        elConfirmation.textContent = 'An email confirmation will be sent shortly.';
+        console.log('PURCHASE COMPLETED');
+        setTimeout(() => {
+            window.location = 'index.html'
+        }, 3000);
+
+        event.preventDefault();
+    } else {
+        alert("Card details invalid.");
+        return false;
     }
-    console.log('LISTNUMBERS VALUE = ' + listNumbers);
-})
+}
+    elPay && elPay.addEventListener("click", pay);
+
+
+/*//THIS DOES NOT WORK
+    let listNumbers = [parseInt(elNumberHSH.value).toString(),
+        parseInt(elNumberHSS.value).toString(),
+        parseInt(elNumberHH.value).toString(),
+        parseInt(elNumberSW.value).toString(),
+        parseInt(elNumberSB.value).toString(),
+        parseInt(elNumberTR.value).toString(),
+        parseInt(elNumberTY.value).toString(),
+        parseInt(elNumberRGA.value).toString(),
+        parseInt(elNumberRGP.value).toString(),
+        parseInt(elNumberRG.value).toString()];
+    listNumbers.forEach(function (item, index, array) {
+        if (listNumbers.value == null) {
+            listNumbers.value = 0;
+        }
+        console.log('LISTNUMBERS VALUE = ' + listNumbers);
+    })*/
+
