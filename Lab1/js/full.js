@@ -537,7 +537,7 @@ elTotal.textContent = 'Total cost: ';
 
 elConfirmation.textContent = conf;
 let cardNr = /^([0-9]{16})$/;
-let cardNr2 = /^([0-9\s]{13,19})$/;
+let cardNr2 = /^([0-9\s]{16,19})$/;
 let secureNr = /^([0-9]{3})$/;
 function pay(event) {
     if (totalCost < 1) {
