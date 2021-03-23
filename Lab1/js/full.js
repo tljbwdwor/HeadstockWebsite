@@ -77,7 +77,7 @@ const priceRG= 8000;
 
 
 
-//Methods to call for eah item when purchase forms are submitted
+//Methods to call for each item when purchase forms are submitted
 //CHARVEL
 function addHSHToCart(event) {
     let orderHSH = parseInt(elNumberHSH.value) * priceHSH;
