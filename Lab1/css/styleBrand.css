@@ -185,7 +185,7 @@ p {
         text-align: left;
     }
 
-    main{
+    .main{
         grid-template-columns: 1fr 1fr;
         word-break-inside: 1;
     }
@@ -242,7 +242,7 @@ p {
         text-align: left;
     }
 
-    main{
+    .main{
         grid-template-columns: 1fr 1fr;
     }
 

@@ -25,7 +25,7 @@
     <form id ="purchase">
         <label for="cardNumber">Full credit or debit card number</label><br>
         <input type="tel" inputmode="numeric" required id="cardNumber" name="cardNumber" pattern="[0-9\s]{13,19}"
-               autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" title="card number must contain 16 characters"><br>
+               autocomplete="off" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" title="card number must contain 16 characters"><br>
         <label for="securityNumber" >Card security number (on reverse)</label><br>
         <input type="text" maxlength="3" required id="securityNumber" name="securityNumber" pattern="[0-9\s]{3}" placeholder="xxx" title="must be a 3 digit number with no spaces"><br>
         <input id="pay" type="submit" value="Pay!"  />
